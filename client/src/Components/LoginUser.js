@@ -19,7 +19,7 @@ const Login = (props) =>{
                 axios.post("http://localhost:8000/api/user/login", {
                         email,
                         password
-                })
+                },{withCredentials: true})
                 .then((res) => {
                         console.log(res.data);
                         navigate("/pirates");
