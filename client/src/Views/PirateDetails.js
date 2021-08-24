@@ -22,8 +22,7 @@ const Details = (props) => {
         paper: {
             width: "50rem", padding: "1rem",
             marginLeft:320,
-            marginTop:5,
-            background:"orange"
+            marginTop:5
         },
         h1: {
             display:"inline-block",
@@ -36,7 +35,7 @@ const Details = (props) => {
         Link: {
             marginLeft:-10
         },
-        top:{
+        pic:{
             display:"inline-block"
         },
         about:{
@@ -47,7 +46,7 @@ const Details = (props) => {
         <div>
             <h1 style={{marginTop:50}}>{pirate.name}</h1>
             <Paper elevation={3} style={styles.paper}>
-            <div className="top" style={styles.top}>
+            <div className="pic" style={styles.top}>
             <h2>Pirate Image: <img  style={{width:"15%",height:"20%"}} src={pirate.imageUrl} alt="pirate"/></h2>
             <p>Catch Phrase: <strong>"{pirate.phrase}"</strong></p>
             </div>

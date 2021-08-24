@@ -33,8 +33,7 @@ const PirateList = (props) => {
         paper: {
             width: "50rem", padding: "1rem",
             marginLeft:320,
-            marginTop:10,
-            background:"orange"
+            marginTop:10
         },
         Link: {
             display: "inline-block",
