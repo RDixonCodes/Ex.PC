@@ -33,7 +33,8 @@ const PirateList = (props) => {
         paper: {
             width: "50rem", padding: "1rem",
             marginLeft:320,
-            marginTop:10
+            marginTop:10,
+            background:"orange"
         },
         Link: {
             display: "inline-block",
@@ -42,10 +43,17 @@ const PirateList = (props) => {
             color:"black",
             textDecoration:"none"
         },
+        h1:{
+            display:"inline-block",
+            marginRight:-150,
+            marginLeft:300
+        },
 
         button:{
+            display:"inline-black",
             marginRight:10,
-            marginLeft:575
+            marginLeft: 220,
+            marginBottom:10
         },
 
         image:{
@@ -60,8 +68,10 @@ const PirateList = (props) => {
     
     return (
     <div>
+        <Paper elevation={3} style={{width:"50rem", marginLeft:320, marginTop:20, background:"sienna",paddingRight:5}}>
         <h1 style={styles.h1}>Pirate Crew</h1><Button href="/pirates/new" color="primary" style={styles.button}>&#43; Add Pirate</Button>
-        <Button onClick={logout} color="success">&#8722; Logout</Button>
+        <Button onClick={logout} color="success" style={{marginBottom:10, marginRigt:10}}>&#8722; Logout</Button>
+        </Paper>
         {props.pirates.sort((pirate,i) => (pirate.name.toLowerCase() > i.name.toLowerCase()) ? 1 : -1).map((pirate, i) =>{
         return(
             <Paper key={i} elevation={3} style={styles.paper}>

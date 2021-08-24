@@ -22,7 +22,8 @@ const Details = (props) => {
         paper: {
             width: "50rem", padding: "1rem",
             marginLeft:320,
-            marginTop:5
+            marginTop:5,
+            background:"orange"
         },
         h1: {
             display:"inline-block",
@@ -46,7 +47,9 @@ const Details = (props) => {
     }
     return (
         <div>
+            <Paper elevation={3} style={{width:"50rem", marginLeft:320, background:"sienna"}}>
             <h1 style={{marginTop:50}}>{pirate.name}</h1>
+            </Paper>
             <Paper elevation={3} style={styles.paper}>
             <div className="pic" style={styles.top}>
             <h2>Pirate Image: <img  style={{width:"15%",height:"20%"}} src={pirate.imageUrl} alt=""/></h2>

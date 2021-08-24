@@ -71,13 +71,14 @@ const PirateForm = (props) => {
         paper: {
             width: "40rem", padding: "1rem",
             marginLeft:380,
+            background:"orange"
         },
         input: {
             marginBottom: "1rem",
             width:"25rem"
         },
         button: {
-            marginRight:-180,
+            marginRight:-220,
             marginBottom:10,
         },
         Link: {
@@ -95,8 +96,10 @@ const PirateForm = (props) => {
     }
     return (
         <>
-        <h1 style={{display:"inline-block",marginRight:100}}>Add Pirate</h1>
+        <Paper elevation={3} style={{width:"40rem",marginLeft:380, marginBottom:5,marginTop:20,background:"sienna",}}>
+        <h1 style={{display:"inline-block",marginRight:80}}>Add Pirate</h1>
         <Button style={styles.button} href="/pirates" color="primary">&#8678; Crew Board</Button>
+        </Paper>
         <Paper elevation={3} style={styles.paper}>
             <h1>&#9760;Pirate Form&#9760;</h1>
             <form onSubmit = {onSubmitHandler}>
