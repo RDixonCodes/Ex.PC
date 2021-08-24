@@ -15,8 +15,8 @@ const Login = (props) =>{
 
         const confirmUser = {
                 email,
-                password
-        }
+                password,
+        };
 
         const login = e => {
                 e.preventDefault();
