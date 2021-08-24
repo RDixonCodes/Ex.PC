@@ -27,9 +27,9 @@ const Register = (props) => {
             confirmPassword,
         };
         axios.post("http://localhost:8000/api/user/register", newUser, 
-        {
-            withCredentials: true
-        })
+
+        { withCredentials: true })
+
         .then(res => {
             console.log(res.data);
             // when we successfully create the account, reset state for registration form.

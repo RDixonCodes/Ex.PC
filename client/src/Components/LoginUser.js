@@ -13,12 +13,16 @@ const Login = (props) =>{
         const [password, setPassword] = useState("");
         const [errorMessage, setErrorMessage] = useState([]);
 
+        const confirmUser = {
+                email,
+                password
+        }
+
         const login = e => {
                 e.preventDefault();
-                axios.post("http://localhost:8000/api/user/login", {
-                        email:email,
-                        password:password,
-                },{withCredentials: true})
+                axios.post("http://localhost:8000/api/user/login",
+                confirmUser
+                ,{withCredentials: true})
                 .then((res) => {
                         console.log(res.data);
                         navigate("/pirates");

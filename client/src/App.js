@@ -7,11 +7,6 @@ import LogReg from './Views/LogReg';
 
 
 function App() {
-  const NotFound = () =>{
-    return(
-    <div>Route not found</div>
-    )
-  }
 
   return (
     <div className="App">
@@ -20,7 +15,6 @@ function App() {
         <PirateForm path="/pirates/new"/>
         <Details path="/pirates/:id"/>
         <LogReg path="/"/>
-        <NotFound default/>
       </Router>
     </div>
   );
