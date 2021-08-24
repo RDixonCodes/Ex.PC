@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import{Paper,
         FormControl,
@@ -31,7 +31,7 @@ const Register = (props) => {
             withCredentials: true
         })
         .then(res => {
-            // console.log(res.data);
+            console.log(res.data);
             // when we successfully create the account, reset state for registration form.
             setFirstName("");
             setLastName("");

@@ -13,6 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 require('./routes/pirate.routes')(app);
 require('./routes/user.routes')(app); 
-const port = 8000;
+
     
-app.listen(port, () => console.log(`Got my ear on port: ${port}`) );
+app.listen(process.env.DB_PORT, () => console.log(`Got my ear on port: ${process.env.DB_PORT}`) );
