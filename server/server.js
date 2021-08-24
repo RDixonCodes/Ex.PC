@@ -7,13 +7,12 @@ const cookieParser = require('cookie-parser');
 require('./config/mongoose.config')(process.env.DB_NAME);
 app.use(cors({
     credentials: true, 
-    origin: 'http://localhost:3000',
-}));
+    origin: 'http://localhost:3000',}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 require('./routes/pirate.routes')(app);
 require('./routes/user.routes')(app); 
-
+const port = 8000;
     
-app.listen(process.env.DB_PORT, () => console.log(`Got my ear on port: ${process.env.DB_PORT}`) );
+app.listen(port, () => console.log(`Got my ear on port: ${port}`) );
