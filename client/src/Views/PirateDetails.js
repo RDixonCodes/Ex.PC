@@ -36,10 +36,12 @@ const Details = (props) => {
             marginLeft:-10
         },
         pic:{
-            display:"inline-block"
+            display:"inline-block",
+            width:300
         },
         about:{
-            display:"inline-block"
+            display:"inline-block",
+            width:250
         }
     }
     return (
@@ -47,7 +49,7 @@ const Details = (props) => {
             <h1 style={{marginTop:50}}>{pirate.name}</h1>
             <Paper elevation={3} style={styles.paper}>
             <div className="pic" style={styles.top}>
-            <h2>Pirate Image: <img  style={{width:"15%",height:"20%"}} src={pirate.imageUrl} alt="pirate"/></h2>
+            <h2>Pirate Image: <img  style={{width:"15%",height:"20%"}} src={pirate.imageUrl} alt=""/></h2>
             <p>Catch Phrase: <strong>"{pirate.phrase}"</strong></p>
             </div>
             <div className="about" styles={styles.about}>
