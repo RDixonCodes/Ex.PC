@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-// import { Button } from 'bootstrap';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Paper,
         OutlinedInput,
@@ -17,8 +16,8 @@ const Login = (props) =>{
         const login = e => {
                 e.preventDefault();
                 axios.post("http://localhost:8000/api/user/login", {
-                        email,
-                        password
+                        email:email,
+                        password:password,
                 },{withCredentials: true})
                 .then((res) => {
                         console.log(res.data);

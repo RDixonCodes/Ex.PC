@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, navigate } from '@reach/router';
 import { Paper } from '@material-ui/core';
 import { Button } from 'reactstrap';
-import DeleteButton from '../Components/DeleteButton';
 
 const Details = (props) => {
     const { _id } = props; 
     const [pirate, setPirate] = useState({});
-    const [currentPirate, setCurrentPirate] = useState("");
-    const [errors, setErrors] = useState();
 
 
     useEffect(() => {
@@ -26,7 +22,8 @@ const Details = (props) => {
         paper: {
             width: "50rem", padding: "1rem",
             marginLeft:320,
-            marginTop:5
+            marginTop:5,
+            background:"orange"
         },
         h1: {
             display:"inline-block",

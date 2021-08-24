@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { navigate, Link } from '@reach/router';
+import { navigate } from '@reach/router';
 import { Button } from 'reactstrap';
 import {  Paper } from '@material-ui/core';
 import DeleteButton from './DeleteButton';
@@ -33,7 +33,8 @@ const PirateList = (props) => {
         paper: {
             width: "50rem", padding: "1rem",
             marginLeft:320,
-            marginTop:10
+            marginTop:10,
+            background:"orange"
         },
         Link: {
             display: "inline-block",
@@ -50,7 +51,8 @@ const PirateList = (props) => {
 
         image:{
             display:"inline-block",
-            marginRigt:40
+            marginRight:40,
+            width:450
         },
         name:{
             display:"inline-block"
@@ -65,7 +67,7 @@ const PirateList = (props) => {
         return(
             <Paper key={i} elevation={3} style={styles.paper}>
                 <div className="image" style={styles.image}>
-                    <img style={{width:"15%",height:"20%"}} src={pirate.imageUrl}></img>
+                    <img style={{width:"15%",height:"20%"}} src={pirate.imageUrl} alt=""></img>
                     <h3>" {pirate.phrase} "</h3>
                 </div>
                 <div className="name" style={styles.name}>

@@ -71,6 +71,7 @@ const PirateForm = (props) => {
         paper: {
             width: "40rem", padding: "1rem",
             marginLeft:380,
+            background:"orange"
         },
         input: {
             marginBottom: "1rem",
